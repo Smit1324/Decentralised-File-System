@@ -25,20 +25,6 @@ const Display = () => {
 
             <div className={`w-full grid md:grid-cols-4 grid-cols-2 md:gap-10 gap-5 ${uploading && 'blur-sm'}`}>
 
-                {
-                    files.map((file, index) => {
-                        return (
-
-                            <a href={!uploading && file} target='_blank' key={index} className='border-2 rounded-lg w-40 h-52 flex items-center justify-center hover:border-zinc-500'>
-
-                                <img src={file} alt="file_preview_error" />
-
-                            </a>
-
-                        )
-                    })
-                }
-
                 <button
                     className={`border-4 border-dashed rounded-lg w-40 h-52 flex items-center justify-center text-5xl text-zinc-400 ${!uploading && 'hover:text-black hover:border-black'} transition ease-in delay-50 duration-200`}
                     onClick={UploadFile}
@@ -48,6 +34,21 @@ const Display = () => {
                     <AiFillPlusCircle />
 
                 </button>
+
+                {
+                    [...files].reverse().map((file, index) => {
+                        return (
+
+                            <a href={!uploading && file} target='_blank' key={index} className='border-2 rounded-lg w-40 h-52 flex items-center justify-center hover:border-zinc-500'>
+
+                                <img src={file} alt='pdf-doc-ppt' className='w-max-40 h-24' />
+
+                            </a>
+
+                        )
+                    })
+                }
+
 
             </div>
 
