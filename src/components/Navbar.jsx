@@ -24,7 +24,7 @@ const Navbar = () => {
             <div className='flex md:flex-row flex-col items-center justify-center md:mr-0 mr-5'>
                 <img src={Metamask} alt="Add" className='w-10 h-10' />
                 <p className='font-medium text-xs md:hidden cursor-default'>{account !== "" ? account.slice(0, 5) + '...' + account.slice(-1) : 'NO WALLET CONNECTED'}</p>
-                <p className='font-medium text-sm md:block md:ms-5 hidden cursor-default'>{account !== "" ? account : 'NO WALLET CONNECTED'}</p>
+                <p className='font-medium md:text-sm text-xs md:block md:ms-5 hidden cursor-default'>{account !== "" ? account : 'NO WALLET CONNECTED'}</p>
             </div>
 
             < button

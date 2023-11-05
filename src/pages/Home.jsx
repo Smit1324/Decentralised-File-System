@@ -18,7 +18,7 @@ const Home = () => {
                         :
                         <UploadFile />
                     :
-                    <div className='w-5/12'>
+                    <div className='md:w-5/12 w-11/12'>
 
                         <p className='font-semibold text-lg text-center'>NO ACCOUNT CONNECTED...PLEASE CONNECT WALLET TO GET ACCESS TO OUR SERVICES 😕</p>
 
