@@ -38,7 +38,7 @@ const Navbar = () => {
 
             < button
                 className={account ? `h-12 w-12 md:hidden flex items-center justify-center border-2 border-blue-400 rounded-full text-xl font-medium bg-blue-400 text-white cursor-default` : `h-14 w-14 md:hidden flex items-center justify-center border-2 border-blue-700 rounded-full text-xl text-white bg-blue-700 font-medium `}
-            // onClick={account ? e => e.preventDefault() : connectWallet}
+                onClick={account ? e => e.preventDefault() : connectWallet}
             >
 
                 {account ? <IoWallet /> : <IoWallet />}
